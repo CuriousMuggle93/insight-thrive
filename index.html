@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insight Thrive Project - Unlock Your Potential</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Poppins & Lato -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        deepTeal: '#008080',
+                        warmSand: '#F4A261',
+                        offWhite: '#F8F9FA',
+                        charcoalGray: '#343A40',
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif'],
+                        'lato': ['Lato', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Applying custom fonts */
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #F8F9FA; /* offWhite */
+            color: #343A40; /* charcoalGray */
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="bg-offWhite/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="flex items-center space-x-2">
+                <svg class="h-8 w-8 text-deepTeal" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-6.364-.386l1.591-1.591M3 12h2.25m.386-6.364l1.591 1.591M12 6a6 6 0 100 12 6 6 0 000-12z" />
+                </svg>
+                <span class="text-xl font-bold text-charcoalGray">Insight Thrive</span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#about" class="text-charcoalGray hover:text-deepTeal transition duration-300">About</a>
+                <a href="#features" class="text-charcoalGray hover:text-deepTeal transition duration-300">Features</a>
+                <a href="#testimonials" class="text-charcoalGray hover:text-deepTeal transition duration-300">Testimonials</a>
+                <a href="#contact" class="bg-warmSand text-white px-5 py-2 rounded-full font-bold hover:bg-opacity-90 transition duration-300 shadow-sm">Contact Us</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-charcoalGray">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <nav class="flex flex-col space-y-4 px-6 pb-4">
+                <a href="#about" class="text-charcoalGray hover:text-deepTeal transition duration-300">About</a>
+                <a href="#features" class="text-charcoalGray hover:text-deepTeal transition duration-300">Features</a>
+                <a href="#testimonials" class="text-charcoalGray hover:text-deepTeal transition duration-300">Testimonials</a>
+                <a href="#contact" class="bg-warmSand text-white text-center px-5 py-2 rounded-full font-bold hover:bg-opacity-90 transition duration-300 shadow-sm">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative h-screen flex items-center justify-center text-white pt-16">
+            <div class="absolute inset-0 bg-black opacity-50 z-10"></div>
+            <img src="img/background.jpg" 
+                 alt="Serene landscape at sunrise" 
+                 class="absolute inset-0 w-full h-full object-cover">
+            <div class="relative z-20 text-center px-6">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold font-poppins mb-4 tracking-tight">Unlock Your Potential.</h1>
+                <h2 class="text-4xl md:text-6xl lg:text-7xl font-bold font-poppins mb-6 tracking-tight">Elevate Your Community.</h2>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 font-lato">The Insight Thrive Project is a collaborative platform dedicated to fostering personal growth, mindfulness, and meaningful connections.</p>
+                <a href="#contact" class="bg-deepTeal text-white px-10 py-4 rounded-full text-lg font-bold hover:bg-opacity-90 transition duration-300 shadow-lg transform hover:scale-105">Join the Movement</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 lg:py-32">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+                    <div class="text-center md:text-left">
+                        <h2 class="text-3xl lg:text-4xl font-bold text-charcoalGray mb-6">Our Mission</h2>
+                        <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                            At Insight Thrive, we believe that individual growth is the foundation of a thriving community. Our mission is to provide accessible tools, expert-led workshops, and a supportive network that empower you to cultivate self-awareness, build resilience, and lead with purpose.
+                        </p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-xl transform hover:scale-105 transition-transform duration-300">
+                        <div class="bg-warmSand/20 p-8 rounded-xl text-center">
+                             <p class="text-6xl lg:text-7xl font-bold text-warmSand mb-2">85%</p>
+                             <p class="text-lg font-semibold text-charcoalGray">of participants report a significant increase in well-being and a deeper sense of community connection.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features & Benefits Section -->
+        <section id="features" class="py-20 lg:py-24 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl lg:text-4xl font-bold text-charcoalGray mb-4">What We Offer</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-16">Discover the pillars of the Insight Thrive experience, designed to foster growth and connection.</p>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Feature Card 1 -->
+                    <div class="bg-offWhite p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                        <div class="bg-deepTeal/10 inline-block p-4 rounded-full mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-deepTeal" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-charcoalGray mb-4">Expert-Led Workshops</h3>
+                        <p class="text-gray-600">Learn practical mindfulness and leadership skills from certified professionals to navigate life's challenges with confidence.</p>
+                    </div>
+
+                    <!-- Feature Card 2 -->
+                    <div class="bg-offWhite p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                        <div class="bg-deepTeal/10 inline-block p-4 rounded-full mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-deepTeal" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                               <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m-7.5-2.962a3.75 3.75 0 015.962 0L14.25 18l-2.962 2.962a3.75 3.75 0 01-5.962 0L5.32 18.72m12.68-6.18a3.75 3.75 0 01-5.962 0L14.25 6l2.962-2.962a3.75 3.75 0 015.962 0L24.68 6.18M4.5 12.45v5.25a3 3 0 003 3h5.25a3 3 0 003-3v-5.25a3 3 0 00-3-3h-5.25a3 3 0 00-3 3z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-charcoalGray mb-4">Peer Support Network</h3>
+                        <p class="text-gray-600">Join a diverse and supportive community of peers who share your journey, fostering collaboration and accountability.</p>
+                    </div>
+
+                    <!-- Feature Card 3 -->
+                    <div class="bg-offWhite p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                        <div class="bg-deepTeal/10 inline-block p-4 rounded-full mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-deepTeal" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-charcoalGray mb-4">Digital Resource Hub</h3>
+                        <p class="text-gray-600">Gain exclusive access to a library of guided meditations, articles, and tools to support your growth anytime, anywhere.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-20 lg:py-32">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl lg:text-4xl font-bold text-charcoalGray text-center mb-16">Stories of Transformation</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Testimonial Card 1 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-xl flex flex-col">
+                        <img src="https://placehold.co/100x100/F4A261/343A40?text=SK" 
+                             alt="Photo of Sarah K." 
+                             class="w-24 h-24 rounded-full mx-auto -mt-20 border-8 border-white">
+                        <p class="text-gray-600 italic text-center mt-6 mb-4 flex-grow">"The Insight Thrive Project was a turning point for me. I not only discovered my own strengths but also found a community that truly cares."</p>
+                        <p class="font-bold text-center text-deepTeal">- Sarah K., Professional Coach</p>
+                    </div>
+
+                    <!-- Testimonial Card 2 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-xl flex flex-col mt-16 md:mt-0">
+                         <img src="https://placehold.co/100x100/008080/FFFFFF?text=MJ" 
+                              alt="Photo of Michael J." 
+                              class="w-24 h-24 rounded-full mx-auto -mt-20 border-8 border-white">
+                        <p class="text-gray-600 italic text-center mt-6 mb-4 flex-grow">"As a community leader, finding genuine opportunities for collaboration is rare. Insight Thrive provided the platform and the people to make a real impact."</p>
+                        <p class="font-bold text-center text-deepTeal">- Michael J., Community Leader</p>
+                    </div>
+                    
+                    <!-- Testimonial Card 3 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-xl flex flex-col mt-16 lg:mt-0">
+                         <img src="https://placehold.co/100x100/343A40/FFFFFF?text=ER" 
+                              alt="Photo of Emily R." 
+                              class="w-24 h-24 rounded-full mx-auto -mt-20 border-8 border-white">
+                        <p class="text-gray-600 italic text-center mt-6 mb-4 flex-grow">"The mindfulness workshops were incredibly practical. I've been able to apply the techniques in both my personal and professional life with amazing results."</p>
+                        <p class="font-bold text-center text-deepTeal">- Emily R., Tech Professional</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section id="contact" class="bg-white py-20 lg:py-24">
+            <div class="container mx-auto px-6">
+                <div class="bg-deepTeal text-white p-10 lg:p-16 rounded-2xl text-center shadow-2xl">
+                    <h2 class="text-3xl lg:text-4xl font-bold mb-4">Ready to Thrive?</h2>
+                    <p class="text-lg text-white/90 max-w-2xl mx-auto mb-8">Sign up for our newsletter to receive updates, free resources, and early access to our upcoming programs.</p>
+                    <form class="max-w-xl mx-auto flex flex-col sm:flex-row gap-4">
+                        <label for="name" class="sr-only">Your Name</label>
+                        <input type="text" id="name" placeholder="Your Name" class="w-full px-5 py-3 rounded-full text-charcoalGray focus:outline-none focus:ring-4 focus:ring-warmSand/50 transition duration-300">
+                        <label for="email" class="sr-only">Your Email</label>
+                        <input type="email" id="email" placeholder="Your Email Address" class="w-full px-5 py-3 rounded-full text-charcoalGray focus:outline-none focus:ring-4 focus:ring-warmSand/50 transition duration-300">
+                        <button type="submit" class="bg-warmSand text-white px-8 py-3 rounded-full font-bold hover:bg-opacity-90 transition duration-300 shadow-lg transform hover:scale-105">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-charcoalGray text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid md:grid-cols-3 gap-8 text-center md:text-left">
+                <!-- Column 1: Logo & Mission -->
+                <div>
+                    <a href="#" class="flex items-center justify-center md:justify-start space-x-2 mb-4">
+                        <svg class="h-8 w-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-6.364-.386l1.591-1.591M3 12h2.25m.386-6.364l1.591 1.591M12 6a6 6 0 100 12 6 6 0 000-12z" />
+                        </svg>
+                        <span class="text-xl font-bold">Insight Thrive</span>
+                    </a>
+                    <p class="text-gray-400">Fostering personal growth and community connection.</p>
+                </div>
+                
+                <!-- Column 2: Quick Links -->
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">About</a></li>
+                        <li><a href="#features" class="text-gray-400 hover:text-white transition">Features</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Connect -->
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Connect</h4>
+                    <p class="text-gray-400 mb-4">hello@insightthrive.org</p>
+                    <div class="flex justify-center md:justify-start space-x-4">
+                        <!-- Social Icons -->
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" /></svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.237 2.663 7.825 6.354 9.161.464.086.632-.202.632-.448v-1.57c-2.584.562-3.13-1.246-3.13-1.246-.422-1.074-1.03-1.36-1.03-1.36-.844-.576.064-.564.064-.564.934.066 1.427 1.03 1.427 1.03.83 1.423 2.174 1.012 2.704.774.084-.602.324-1.012.586-1.244-2.06-.234-4.226-1.03-4.226-4.582 0-1.012.362-1.838 1.03-2.486-.104-.234-.448-1.176.098-2.45 0 0 .778-.25 2.55 1.014A8.948 8.948 0 0112 8.002c.79 0 1.597.108 2.342.322 1.77-1.264 2.548-1.014 2.548-1.014.548 1.274.202 2.216.1 2.45.67.648 1.028 1.474 1.028 2.486 0 3.562-2.17 4.346-4.236 4.574.336.29.63 1.012.63 1.93v2.85c0 .248.166.54.638.448C19.34 19.825 22 16.237 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-700 pt-8 text-center text-gray-500">
+                <p>&copy; 2025 Insight Thrive Project. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close menu when a link is clicked
+        const navLinks = mobileMenu.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
